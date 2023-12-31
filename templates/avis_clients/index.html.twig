@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<title>Hello AvisClientsController!</title>
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<section class="avis">
+    <div><h1>Laissez nous votre avis:</h1></div>
+    <div>
+    <form>
+        <label for="avis"></label>
+        <textarea id="avis" name="avis"
+                  rows="5" cols="33" placeholder="Donne nous ton avis sur ton expérience avec nous..." required></textarea><br>
+        <br>
+        <button class="btn btn-primary">Déposer</button>
+    </form>
+    </div>
+</section>
+
+{% endblock %}
