@@ -1,23 +1,30 @@
-<title>Nos prestations</title>
+{% extends 'layout/base.html.twig' %}
+
+{% block title %}Nos prestations{% endblock %}
 
 {% block body %}
 
-<section class="caroussel">
+    <section class="caroussel">
 
-<div class="defile_carousel">
-        <figure>
-            <img src="/assets/images/prestations/maçonneriegénérale.jpg" alt="maçonneriegénérale">
-            <img src="/assets/images/prestations/grosoeuvre.jpg" alt="grosoeuvre">
-            <img src="/assets/images/prestations/travaux-de-renovation-avant-et-apres.jpg" alt="travaux-de-renovation-avant-et-apres">
-            <img src="/assets/images/prestations/couverturetoiture.jpg" alt="couverturetoiture">
-            <img src="/assets/images/prestations/construction-dune-piscine-desjoyaux.jpg" alt="construction-dune-piscine-desjoyaux">
-        </figure>
-        <nav>
-            <button class="nav_prev">Prev</button>
-            <button class="nav_next">Next</button>
-        </nav>
-    </div>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src={{ asset('media/images/prestations/construction-dune-piscine-desjoyaux.jpg') }} alt="construction-piscine-desjoyaux">
+            </div>
+            <div class="carousel-slide">
+                <img src={{ asset('media/images/prestations/couverturetoiture.jpg') }} alt="couverture-toiture">
+            </div>
+            <div class="carousel-slide">
+                <img src={{ asset('media/images/prestations/grosoeuvre.jpg') }} alt="grosoeuvre">
+            </div>
+            <div class="carousel-slide">
+                <img src={{ asset('media/images/prestations/maçonneriegénérale.jpg') }} alt="maçonneriegénérale">
+            </div>
+            <div class="carousel-slide">
+                <img src={{ asset('media/images/prestations/travaux-de-renovation-avant-et-apres.jpg') }} alt="travaux-de-renovation-avant-et-apres">
+            </div>
+        </div>
 
-</section>
+
+    </section>
 
 {% endblock %}
