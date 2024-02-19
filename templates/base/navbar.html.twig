@@ -8,31 +8,31 @@
 
   <!-- logo -->
   <a href="/" class="menu-logo">
-{#    <img src={{ asset('media/images/logoentreprise.jpg') }}  alt="logoentreprise"/>#}
+    <img src={{ asset('media/images/logoentreprise.jpg') }} alt="logoentreprise">
   </a>
 
   <!-- menu items -->
   <div class="menu">
     <ul>
       <li>
-        <a href="/prestations">
+        <a href="{{ path('app_prestations') }}">
           Nos prestations
         </a>
       </li>
       <li>
-        <a href="/realisation">
+        <a href="{{ path('app_realisation') }}">
           Nos réalisations
         </a>
       </li>
     </ul>
     <ul>
       <li>
-        <a href="/register">
+        <a href="{{ path('app_register') }}">
           S'inscrire
         </a>
       </li>
       <li>
-        <a href="/login">
+        <a href="{{ path('app_login') }}">
           Se connecter
         </a>
       </li>
