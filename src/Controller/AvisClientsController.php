@@ -5,14 +5,22 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Repository\ClientAvisRepository;
 
 class AvisClientsController extends AbstractController
 {
-    #[Route('/avis/clients', name: 'app_avis_clients')]
-    public function index(): Response
+    #[Route('/', name: 'index')]
+    public function index(ClientAvisRepository $ClientAvisRepository): Response
     {
-        return $this->render('avis_clients/index.html.twig', [
-            'controller_name' => 'AvisClientsController',
-        ]);
+        $avis = $ClientAvisRepository->findAll();
+        $date_publication = '';
+
+        return $this->render('/', [
+            'avis' => $avis,
+            'date_publication' => $date_publication,
+            ]);
     }
+
 }
+
+

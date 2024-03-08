@@ -14,7 +14,7 @@
             Monsieur Lary TEISSIER a fait l’école des compagnons du devoir à Nîmes, et a travaillé comme salarié
             pour un patron où il a continué d’apprendre le métier. <br>
 
-            Puis il a décidé de se mettre en auto-entrepreneur pendant quelques années où il a pu faire sa clientèle
+            Puis, il a décidé de se mettre en auto-entrepreneur pendant quelques années où il a pu faire sa clientèle
             et continuer d’évoluer. <br>
 
             Monsieur Lary TEISSIER a fini par proposer à son frère jumeau de monter une entreprise dans la maçonnerie et
@@ -29,7 +29,7 @@
     <div class="contact_direct">
 
         <div>
-        Contactez nous directement par téléphone:<br><br>
+        Contactez nous directement par téléphone :<br><br>
 
         <a href="tel:+33711223344">
             <img src={{ asset('media/images/téléphone.png') }} width="150px" height="150px" alt="téléphone">
@@ -37,7 +37,7 @@
         </div>
 
         <div>
-        Contactez nous directement par mail:<br><br>
+        Contactez nous directement par mail :<br><br>
 
         <a href="mailto:votreadresse@mail.fr">
             <img src={{ asset('media/images/email_envelope_icon_148215.png') }} width="150px" height="150px"
@@ -57,10 +57,24 @@
     <hr>
 
     <div class="avisclient">
-        <h2>Les avis laissés par nos clients</h2>
-        <h4>(Les deux derniers en date)</h4>
-    </div>
+{#        <h2>Les avis laissés par nos clients :</h2>#}
+{#        <h4>(Les deux derniers en date)</h4>#}
 
+        {% block avis %}
+            {% if avis is not empty %}
+                <h2>Avis clients :</h2>
+                <ul>
+                    {% for Avis in avis %}
+                        <li>{{ Avis.date_publication }}</li>
+                        <li>{{ Avis.avis }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Aucun avis disponible pour le moment.</p>
+            {% endif %}
+        {% endblock %}
+
+    </div>
     <hr>
 
     <div>
