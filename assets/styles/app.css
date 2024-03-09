@@ -215,7 +215,8 @@ footer {
     justify-content: space-around;
     align-items: center;
     margin-bottom: 0;
-    background-color: darkorange;
+    background: #232323;
+    color: white;
 }
 
 ul {

@@ -25,6 +25,7 @@
         </a>
       </li>
     </ul>
+
     <ul>
       <li>
         <a href="{{ path('app_register') }}">
@@ -32,11 +33,20 @@
         </a>
       </li>
       <li>
-        <a href="{{ path('app_login') }}">
-          Se connecter
-        </a>
+       {% if app.user %}
+            <!-- Si l'utilisateur est connecté, affichez le bouton de déconnexion -->
+            <a href="{{ path('app_logout') }}">Déconnection</a>
+              
+              
+        {% else %}
+            <!-- Si l'utilisateur n'est pas connecté, affichez le bouton de connexion ou autre chose -->
+            <a href="{{ path('app_login') }}">Connexion</a>
+        {% endif %}
       </li>
     </ul>
+
+
+
   </div>
 </nav>
 {% endblock %}

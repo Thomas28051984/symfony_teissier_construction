@@ -60,21 +60,7 @@
         <h2>Les avis laissés par nos clients :</h2>
 {#        <h4>(Les deux derniers en date)</h4>#}
 
-        {% block avis %}
-            {% if avis is not empty %}
-                <h2>Avis clients :</h2>
-                <ul>
-                    {% for avisItem in avis %}
-                        <li>{{ avisItem.date_publication }}</li>
-                        <li>{{ avisItem.avis }}</li>
-                        <!-- Ajoutez d'autres éléments d'avis à afficher selon votre modèle d'avis -->
-                    {% endfor %}
-                </ul>
-            {% else %}
-                <p>Aucun avis disponible pour le moment.</p>
-            {% endif %}
-        {% endblock %}
-
+        
     </div>
     <hr>
 
