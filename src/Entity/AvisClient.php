@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ClientAvisRepository;
+use App\Repository\AvisClientRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ClientAvisRepository::class)]
-class ClientAvis
+#[ORM\Entity(repositoryClass: AvisClientRepository::class)]
+class AvisClient
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -18,10 +18,7 @@ class ClientAvis
     private ?\DateTimeInterface $date_publication = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $avis = null;
-
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
-    private ?user $id_client = null;
+    private ?string $commentaire = null;
 
     public function getId(): ?int
     {
@@ -40,26 +37,14 @@ class ClientAvis
         return $this;
     }
 
-    public function getAvis(): ?string
+    public function getCommentaire(): ?string
     {
-        return $this->avis;
+        return $this->commentaire;
     }
 
-    public function setAvis(string $avis): static
+    public function setCommentaire(string $commentaire): static
     {
-        $this->avis = $avis;
-
-        return $this;
-    }
-
-    public function getIdClient(): ?user
-    {
-        return $this->id_client;
-    }
-
-    public function setIdClient(?user $id_client): static
-    {
-        $this->id_client = $id_client;
+        $this->commentaire = $commentaire;
 
         return $this;
     }

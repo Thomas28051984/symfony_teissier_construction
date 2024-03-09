@@ -6,4 +6,4 @@ controllers:
 
 index:
     path: /
-    controller: App\Controller\AvisClientController::index
+    controller: App\Controller\AvisClientsController::index
