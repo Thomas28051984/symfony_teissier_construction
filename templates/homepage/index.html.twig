@@ -9,7 +9,7 @@
         <p>
             L’entreprise TEISSIER construction a été créée le 16 mai 2014, situé au 6 CHE DE TRANSIDE ET CABRIE,
             34820 TEYRAN. <br>
-            Elle est gérée par Monsieur Lary et Kévin TEISSIER. Elle compte quatres salariés maçons dont les deux
+            Elle est gérée par Monsieur Lary et Kévin TEISSIER. Elle compte quatre salariés maçons dont les deux
             gérants. <br>
             Monsieur Lary TEISSIER a fait l’école des compagnons du devoir à Nîmes, et a travaillé comme salarié
             pour un patron où il a continué d’apprendre le métier. <br>
@@ -64,9 +64,10 @@
             {% if avis is not empty %}
                 <h2>Avis clients :</h2>
                 <ul>
-                    {% for Avis in avis %}
-                        <li>{{ Avis.date_publication }}</li>
-                        <li>{{ Avis.avis }}</li>
+                    {% for avisItem in avis %}
+                        <li>{{ avisItem.date_publication }}</li>
+                        <li>{{ avisItem.avis }}</li>
+                        <!-- Ajoutez d'autres éléments d'avis à afficher selon votre modèle d'avis -->
                     {% endfor %}
                 </ul>
             {% else %}
