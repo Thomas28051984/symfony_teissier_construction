@@ -7,3 +7,17 @@ controllers:
 index:
     path: /
     controller: App\Controller\AvisClientsController::index
+
+    
+client_dashboard:
+    path: client_page
+    controller: App\Controller\ClientPageController::index
+
+
+admin_dashboard:
+    path: admin_page
+    controller: App\Controller\AdminPageController::index
+
+homepage:
+    path: /
+    controller: App\Controller\HomepageController::index

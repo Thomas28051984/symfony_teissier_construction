@@ -20,9 +20,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
 
-    #[ORM\Column]
-    private array $roles = [1];
-
     /**
      * @var string The hashed password
      */
@@ -57,25 +54,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @see UserInterface
-     */
-    public function getRoles(): array
-    {
-        $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
-
-        return array_unique($roles);
-    }
-
-    public function setRoles(array $roles): static
-    {
-        $this->roles = $roles;
-
-        return $this;
-    }
-
-    /**
      * @see PasswordAuthenticatedUserInterface
      */
     public function getPassword(): string
@@ -102,6 +80,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function isAdmin(): bool
     {
         return \in_array('ROLE_ADMIN', $this->getRoles(), true);
+    }
+
+    public function isClient(): bool
+    {
+        return \in_array('ROLE_CLIENT', $this->getRoles(), true);
+    }
+
+    public function getRoles(): array
+    {
+        // Retourne les rôles de l'utilisateur
+        return ['ROLE_USER']; // Exemple de rôle, vous devez retourner les rôles appropriés pour votre application
     }
 
 }
