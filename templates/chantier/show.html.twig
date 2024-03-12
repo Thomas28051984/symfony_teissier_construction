@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<title>Chantier</title>
+
+{% block body %}
+    <h1>Chantier</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ chantier.id }}</td>
+            </tr>
+            <tr>
+                <th>Code_postal</th>
+                <td>{{ chantier.codePostal }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ chantier.ville }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ chantier.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ chantier.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_chantier_index') }}">back to list</a>
+
+    <a href="{{ path('app_chantier_edit', {'id': chantier.id}) }}">edit</a>
+
+    {{ include('chantier/_delete_form.html.twig') }}
+{% endblock %}
