@@ -1,0 +1,15 @@
+{% extends 'layout/base.html.twig' %}
+
+{% block title %}Liste des fichiers partagés{% endblock %}
+
+{% block body %}
+    <h1>Liste des fichiers partagés</h1>
+
+    <ul>
+        {% for file in files %}
+            <li>{{ file.nom }} - <a href="{{ path('file_download', {'id': file.id}) }}">Télécharger</a> - <a href="{{ path('file_delete', {'id': file.id}) }}">Supprimer</a></li>
+        {% else %}
+            <li>Aucun fichier partagé</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

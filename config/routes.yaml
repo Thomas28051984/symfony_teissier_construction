@@ -21,3 +21,11 @@ admin_dashboard:
 homepage:
     path: /
     controller: App\Controller\HomepageController::index
+
+file_upload_form:
+    path: /file/upload
+    controller: App\Controller\FileController::uploadForm
+
+file_list:
+    path: /file/list
+    controller: App\Controller\FileController::fileList
