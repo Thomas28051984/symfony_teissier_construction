@@ -26,10 +26,12 @@
     <hr>
     <br>
 
+    <h2>Contactez-nous :</h2>
+
     <div class="contact_direct">
 
         <div>
-        Contactez nous directement par téléphone :<br><br>
+
 
         <a href="tel:+33711223344">
             <img src={{ asset('media/images/téléphone.png') }} width="150px" height="150px" alt="téléphone">
@@ -37,7 +39,7 @@
         </div>
 
         <div>
-        Contactez nous directement par mail :<br><br>
+
 
         <a href="mailto:votreadresse@mail.fr">
             <img src={{ asset('media/images/email_envelope_icon_148215.png') }} width="150px" height="150px"
@@ -50,18 +52,15 @@
     <br>
     <hr>
 
-    <div class="image_maçon">
-        <img src={{ asset('media/images/industrial-builder.jpg') }} width="100%" height="350px" alt="téléphone">
-    </div>
-
-    <hr>
-
-    <div class="avisclient">
+    <div class="avis_client">
         <h2>Les avis laissés par nos clients :</h2>
-{#        <h4>(Les deux derniers en date)</h4>#}
+        <ul>
+            {% for avis_client in avis_clients %}
+                <li>({{ avis_client.date_publication }}): {{ avis_client.message }}</li>
+            {% endfor %}
+        </ul>
+   </div>
 
-        
-    </div>
     <hr>
 
     <div>
@@ -69,6 +68,5 @@
                 width="100%" height="480"></iframe>
     </div>
 
-    <hr>
 
 {% endblock %}

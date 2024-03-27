@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\AvisClient;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,5 +28,14 @@ class HomepageController extends AbstractController
         ]);
     }
 
-    
+    public function avis(): Response
+    {
+        $avisClientRepository = $this->getDoctrine()->getRepository(AvisClient::class);
+        $avis_clients = $avisClientRepository->findAll();
+
+        return $this->render('homepage/index.html.twig', [
+            'avis_clients' => $avis_clients,
+        ]);
+    }
+
 }

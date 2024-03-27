@@ -3,17 +3,17 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     background-color: lightslategrey;
-
+    margin: 0;
 }
 
 .menu-container {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+
     background: #232323;
     color: #ffffff;
-    padding: 20px;
+
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -21,8 +21,9 @@ body {
 }
 
 .menu-logo {
+    margin-left: 5px;
     line-height: 0;
-    margin: 0 20px;
+
 }
 
 .menu-logo img {
@@ -176,9 +177,10 @@ body {
     }
 }
 
-.infopratique {
+.infospratique {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     margin-bottom: 0;
     background-color: #232323;
 }
@@ -206,14 +208,13 @@ body {
 }
 
 hr {
+    width: 100%;
     height: 5px;
     background: RGB(218, 101, 16);
 }
 
 footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
     margin-bottom: 0;
     background: #232323;
     color: white;
@@ -255,12 +256,21 @@ ul {
 }
 
 h1{
-    display: flex;
+    text-align: center;
+}
+
+h2{
     text-align: center;
 }
 
 p{
-    display: flex;
     text-align: center;
 }
 
+a {
+    text-decoration: none;
+}
+
+h4{
+    text-align: center;
+}
