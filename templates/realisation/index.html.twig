@@ -6,24 +6,54 @@
 
     <h1>Voici quelques une de nos réalisations :</h1>
 
-    <section class="caroussel">
-
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/realisations/attachment1683192326902.jpg') }} alt="image1">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/realisations/attachment1683192326929.jpg') }} alt="image2">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/realisations/attachment1683192326981.jpg') }} alt="image3">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/realisations/attachment1683192354960.jpg') }} alt="image4">
-            </div>
+    <div class="slideshow">
+        <ul class="slides">
+            <li class="slide is-active">
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326902.jpg') }});"></div>
+            </li>
+            <li class="slide">
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326929.jpg') }});"></div>
+            </li>
+            <li class="slide">
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326981.jpg') }});"></div>
+            </li>
+            <li class="slide">
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/realisations/attachment1683192354960.jpg') }});"></div>
+            </li>
+        </ul>
+        <div class="arrows">
+            <button class="arrow arrow-prev">
+                <span></span>
+            </button>
+            <button class="arrow arrow-next">
+                <span></span>
+            </button>
         </div>
+    </div>
 
 
-    </section>
+{#    <section class="caroussel">#}
+
+{#        <div class="carousel-container">#}
+{#            <div class="carousel-slide">#}
+{#                <img src={{ asset('media/images/realisations/attachment1683192326902.jpg') }} alt="image1">#}
+{#            </div>#}
+{#            <div class="carousel-slide">#}
+{#                <img src={{ asset('media/images/realisations/attachment1683192326929.jpg') }} alt="image2">#}
+{#            </div>#}
+{#            <div class="carousel-slide">#}
+{#                <img src={{ asset('media/images/realisations/attachment1683192326981.jpg') }} alt="image3">#}
+{#            </div>#}
+{#            <div class="carousel-slide">#}
+{#                <img src={{ asset('media/images/realisations/attachment1683192354960.jpg') }} alt="image4">#}
+{#            </div>#}
+{#        </div>#}
+
+
+{#    </section>#}
 
 {% endblock %}

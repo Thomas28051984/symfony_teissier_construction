@@ -27,3 +27,6 @@ services:
     App\EventListener\LoginRedirectListener:
         tags:
             - { name: kernel.event_listener, event: security.interactive_login }
+
+    Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface:
+        alias: 'security.password_hasher'

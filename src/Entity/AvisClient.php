@@ -2,50 +2,43 @@
 
 namespace App\Entity;
 
-use App\Repository\AvisClientRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: AvisClientRepository::class)]
+/**
+ * @ORM\Entity(repositoryClass="App\Repository\AvisClientRepository")
+ */
 class AvisClient
 {
-    #[ORM\Id]
-    #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+    private $id;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
-    private ?\DateTimeInterface $date_publication = null;
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $contenu;
 
-    #[ORM\Column(length: 255)]
-    private ?string $commentaire = null;
+    // Ajoutez d'autres propriétés si nécessaire
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getDatePublication(): ?\DateTimeInterface
+    public function getContenu(): ?string
     {
-        return $this->date_publication;
+        return $this->contenu;
     }
 
-    public function setDatePublication(\DateTimeInterface $date_publication): static
+    public function setContenu(string $contenu): self
     {
-        $this->date_publication = $date_publication;
+        $this->contenu = $contenu;
 
         return $this;
     }
 
-    public function getCommentaire(): ?string
-    {
-        return $this->commentaire;
-    }
-
-    public function setCommentaire(string $commentaire): static
-    {
-        $this->commentaire = $commentaire;
-
-        return $this;
-    }
+    // Ajoutez d'autres getters et setters si nécessaire
 }

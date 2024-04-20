@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-use App\Entity\AvisClient;
 use App\Form\AvisType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -30,7 +29,7 @@ class AvisClientController extends AbstractController
             return $this->redirectToRoute('homepage/index.html.twig');
         }
 
-        return $this->render('avis_client/index.html.twig', [
+        return $this->render('avis_client/index.html.twig.', [
             'form' => $form->createView(),
         ]);
     }

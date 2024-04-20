@@ -34,32 +34,37 @@
 
 
         <a href="tel:+33711223344">
-            <img src={{ asset('media/images/téléphone.png') }} width="150px" height="150px" alt="téléphone">
+            <img src={{ asset('media/images/téléphone.png') }}>
         </a>
         </div>
 
         <div>
 
-
+{#        Faire en sorte que le mail ne soit pas lisible en clair#}
         <a href="mailto:votreadresse@mail.fr">
-            <img src={{ asset('media/images/email_envelope_icon_148215.png') }} width="150px" height="150px"
-                 alt="icon_mail">
+            <img src={{ asset('media/images/email_envelope_icon_148215.png') }}>
         </a>
         </div>
 
     </div>
 
     <br>
+
     <hr>
 
-    <div class="avis_client">
-        <h2>Les avis laissés par nos clients :</h2>
-        <ul>
-            {% for avis_client in avis_clients %}
-                <li>({{ avis_client.date_publication }}): {{ avis_client.message }}</li>
-            {% endfor %}
-        </ul>
-   </div>
+{#    <div class="avis_client">#}
+{#        <h2>Les avis laissés par nos clients :</h2>#}
+{#        {% if avisClients is empty %}#}
+{#            <p>Il n'y a pas d'avis déposé pour le moment.</p>#}
+{#        {% else %}#}
+{#            <ul>#}
+{#                {% for avisClient in avisClients %}#}
+{#                    <li>Date de publication : {{ avisClients.date_publication }}</li>#}
+{#                    <li>Commentaire : {{ avisClients.commentaire }}</li>#}
+{#                {% endfor %}#}
+{#            </ul>#}
+{#        {% endif %}#}
+{#    </div>#}
 
     <hr>
 

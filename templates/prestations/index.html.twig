@@ -6,27 +6,48 @@
 
     <h1>Voici nos prestations :</h1>
 
-    <section class="caroussel">
+    <div class="slideshow">
+        <ul class="slides">
+            <li class="slide is-active">
+                <div class="caption"><h2>Construction de piscine</h2></div>
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/prestations/construction-dune-piscine-desjoyaux.jpg')}});">
+                </div>
 
-        <div class="carousel-container">
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/prestations/construction-dune-piscine-desjoyaux.jpg') }} alt="construction-piscine-desjoyaux">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/prestations/couverturetoiture.jpg') }} alt="couverture-toiture">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/prestations/grosoeuvre.jpg') }} alt="grosoeuvre">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/prestations/maçonneriegénérale.jpg') }} alt="maçonneriegénérale">
-            </div>
-            <div class="carousel-slide">
-                <img src={{ asset('media/images/prestations/travaux-de-renovation-avant-et-apres.jpg') }} alt="travaux-de-renovation-avant-et-apres">
-            </div>
+            </li>
+            <li class="slide">
+                <div class="caption"><h2>Couverture et toiture</h2></div>
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/prestations/couverturetoiture.jpg') }});">
+                </div>
+            </li>
+            <li class="slide">
+                <div class="caption"><h2>Gros-oeuvre</h2></div>
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/prestations/grosoeuvre.jpg') }});">
+                </div>
+            </li>
+            <li class="slide">
+                <div class="caption"><h2>Maçonnerie générale</h2></div>
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/prestations/maçonneriegénérale.jpg') }});">
+                </div>
+            </li>
+            <li class="slide">
+                <div class="caption"><h2>Travaux de rénovation</h2></div>
+                <div class="cover"
+                     style="background-image: url({{ asset('media/images/prestations/travaux-de-renovation-avant-et-apres.jpg') }});">
+                </div>
+            </li>
+        </ul>
+        <div class="arrows">
+            <button class="arrow arrow-prev">
+                <span></span>
+            </button>
+            <button class="arrow arrow-next">
+                <span></span>
+            </button>
         </div>
-
-
-    </section>
+    </div>
 
 {% endblock %}

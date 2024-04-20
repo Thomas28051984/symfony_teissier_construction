@@ -4,11 +4,11 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-index:
+avis:
     path: /
     controller: App\Controller\AvisClientsController::index
 
-    
+
 client_dashboard:
     path: /client/page
     controller: App\Controller\ClientPageController::index
@@ -29,3 +29,7 @@ file_upload_form:
 file_list:
     path: /file/list
     controller: App\Controller\FileController::fileList
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
