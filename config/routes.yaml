@@ -4,31 +4,9 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-avis:
-    path: /
-    controller: App\Controller\AvisClientsController::index
-
-
-client_dashboard:
-    path: /client/page
-    controller: App\Controller\ClientPageController::index
-
-
-admin_dashboard:
-    path: /admin/page
-    controller: App\Controller\AdminPageController::index
-
 homepage:
     path: /
     controller: App\Controller\HomepageController::index
-
-file_upload_form:
-    path: /file/upload
-    controller: App\Controller\FileController::uploadForm
-
-file_list:
-    path: /file/list
-    controller: App\Controller\FileController::fileList
 
 app_register:
     path: /register

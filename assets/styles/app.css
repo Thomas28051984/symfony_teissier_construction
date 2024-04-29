@@ -4,6 +4,38 @@ body {
     overflow-x: hidden;
     background-color: lightslategrey;
     margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    background: RGB(218, 101, 16);
+}
+
+h1{
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4{
+    text-align: center;
 }
 
 .menu-container {
@@ -27,8 +59,8 @@ body {
 }
 
 .menu-logo img {
-    height: 40px;
-    width: 100px;
+    height: 80px;
+    width: 200px;
     flex-shrink: 0;
 }
 
@@ -183,22 +215,17 @@ body {
     align-items: center;
     margin-bottom: 0;
     background-color: #232323;
+    color: white;
 }
 
 .registerform {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px auto;
 }
 
 .loginform{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin: 100px auto;
 }
 
 .contact_direct {
@@ -207,77 +234,19 @@ body {
     justify-content: space-evenly;
 }
 
-hr {
-    width: 100%;
-    height: 5px;
-    background: RGB(218, 101, 16);
-}
-
 footer {
-
     margin-bottom: 0;
     background: #232323;
     color: white;
 }
 
-ul {
-    list-style-type: none;
-}
-
-/*.caroussel {*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    margin-top: 50%;*/
-/*}*/
-
 .histoire_entreprise {
     align-content: center;
 }
 
-/*.carousel-container {*/
-/*    width: 100%;*/
-/*    overflow: hidden;*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    left: auto;*/
-/*    right: auto;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
-/*.carousel-slide {*/
-/*    display: none;*/
-/*    width: 100%;*/
-/*}*/
-
-/*.carousel-slide.img {*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*}*/
-
-h1{
-    text-align: center;
-}
-
-h2{
-    text-align: center;
-}
-
-p{
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-h4{
-    text-align: center;
-}
-
 .contact_direct.img{
-    height: 1000px;
-    width: 1000px;
+    height: 100px;
+    width: 100px;
 }
 
 /* SLIDESHOW
@@ -370,11 +339,6 @@ button {
     box-sizing: border-box;
 }
 
-body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
-}
-
 .form-container {
     max-width: 400px;
     margin: 50px auto;
@@ -383,11 +347,6 @@ body {
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: #333;
 }
 
 .form-group {
