@@ -6,48 +6,92 @@
 
     <h1>Voici nos prestations :</h1>
 
-    <div class="slideshow">
-        <ul class="slides">
-            <li class="slide is-active">
-                <div class="caption"><h2>Construction de piscine</h2></div>
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/prestations/construction-dune-piscine-desjoyaux.jpg')}});">
-                </div>
-
-            </li>
-            <li class="slide">
-                <div class="caption"><h2>Couverture et toiture</h2></div>
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/prestations/couverturetoiture.jpg') }});">
-                </div>
-            </li>
-            <li class="slide">
-                <div class="caption"><h2>Gros-oeuvre</h2></div>
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/prestations/grosoeuvre.jpg') }});">
-                </div>
-            </li>
-            <li class="slide">
-                <div class="caption"><h2>Maçonnerie générale</h2></div>
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/prestations/maçonneriegénérale.jpg') }});">
-                </div>
-            </li>
-            <li class="slide">
-                <div class="caption"><h2>Travaux de rénovation</h2></div>
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/prestations/travaux-de-renovation-avant-et-apres.jpg') }});">
-                </div>
-            </li>
-        </ul>
-        <div class="arrows">
-            <button class="arrow arrow-prev">
-                <span></span>
-            </button>
-            <button class="arrow arrow-next">
-                <span></span>
-            </button>
+    <section>
+    <div class="container">
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3">
+            <input type="radio" name="slides" id="slide-4">
+            <input type="radio" name="slides" id="slide-5">
+            
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\prestations\construction-dune-piscine-desjoyaux.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            Construction de piscine.
+                            <span class="credit">Photo: TEISSIER Lary</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\prestations\couverturetoiture.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            Couverture et toiture.
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\prestations\grosoeuvre.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            Gros oeuvre.
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\prestations\maçonneriegénérale.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            Maçonnerie générale.
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\prestations\travaux-de-renovation-avant-et-apres.jpg" alt="">
+                        </div>
+                        <figcaption>
+                           Travaux de rénovation.
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                
+            </ul>    
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img src="media\images\prestations\construction-dune-piscine-desjoyaux - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img src="media\images\prestations\couverturetoiture - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img src="media\images\prestations\grosoeuvre - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-4"><img src="media\images\prestations\maçonneriegénérale - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-5"><img src="media\images\prestations\travaux-de-renovation-avant-et-apres - miniature.jpg" alt=""></label>
+                </li>
+            </ul>
         </div>
     </div>
+</section>
 
 {% endblock %}

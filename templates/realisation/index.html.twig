@@ -6,54 +6,63 @@
 
     <h1>Voici quelques une de nos réalisations :</h1>
 
-    <div class="slideshow">
-        <ul class="slides">
-            <li class="slide is-active">
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326902.jpg') }});"></div>
-            </li>
-            <li class="slide">
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326929.jpg') }});"></div>
-            </li>
-            <li class="slide">
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/realisations/attachment1683192326981.jpg') }});"></div>
-            </li>
-            <li class="slide">
-                <div class="cover"
-                     style="background-image: url({{ asset('media/images/realisations/attachment1683192354960.jpg') }});"></div>
-            </li>
-        </ul>
-        <div class="arrows">
-            <button class="arrow arrow-prev">
-                <span></span>
-            </button>
-            <button class="arrow arrow-next">
-                <span></span>
-            </button>
+    <section>
+    <div class="container">
+        <div class="carousel">
+            <input type="radio" name="slides" checked="checked" id="slide-1">
+            <input type="radio" name="slides" id="slide-2">
+            <input type="radio" name="slides" id="slide-3">
+            
+            <ul class="carousel__slides">
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\realisations\attachment1683192326902.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            
+                            <span class="credit">Photo: TEISSIER Lary</span>
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\realisations\attachment1683192326929.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                <li class="carousel__slide">
+                    <figure>
+                        <div>
+                            <img src="media\images\realisations\attachment1683192354960.jpg" alt="">
+                        </div>
+                        <figcaption>
+                            
+                            <span class="credit">Photo: TEISSIER Lary</span>                            
+                        </figcaption>
+                    </figure>
+                </li>
+                
+            </ul>    
+            <ul class="carousel__thumbnails">
+                <li>
+                    <label for="slide-1"><img src="media\images\realisations\attachment1683192326902 - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-2"><img src="media\images\realisations\attachment1683192326929 - miniature.jpg" alt=""></label>
+                </li>
+                <li>
+                    <label for="slide-3"><img src="media\images\realisations\attachment1683192354960 - miniature.jpg" alt=""></label>
+                </li>
+                
+            </ul>
         </div>
     </div>
-
-
-{#    <section class="caroussel">#}
-
-{#        <div class="carousel-container">#}
-{#            <div class="carousel-slide">#}
-{#                <img src={{ asset('media/images/realisations/attachment1683192326902.jpg') }} alt="image1">#}
-{#            </div>#}
-{#            <div class="carousel-slide">#}
-{#                <img src={{ asset('media/images/realisations/attachment1683192326929.jpg') }} alt="image2">#}
-{#            </div>#}
-{#            <div class="carousel-slide">#}
-{#                <img src={{ asset('media/images/realisations/attachment1683192326981.jpg') }} alt="image3">#}
-{#            </div>#}
-{#            <div class="carousel-slide">#}
-{#                <img src={{ asset('media/images/realisations/attachment1683192354960.jpg') }} alt="image4">#}
-{#            </div>#}
-{#        </div>#}
-
-
-{#    </section>#}
+</section>
 
 {% endblock %}
